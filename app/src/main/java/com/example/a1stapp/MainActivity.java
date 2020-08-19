@@ -6,7 +6,6 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,11 +17,10 @@ import androidx.core.app.ActivityCompat;
 
 public class MainActivity extends AppCompatActivity {
     public int REQUESTCODE = 3;
-    EditText EditText = (EditText) findViewById(R.id.edt);
-    TextView txt;//txt2;
+    TextView EditText;//txt2;
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn00, btnH, btnD, btnS, btnM, btnP, btnC, btnA, btnE, btnF;
     double val1 = 0, val2 = 0;
-    boolean Addition, Subtraction, Multiplication, Division, Remainder;
+    boolean Addition, Subtraction, Multiplication, Division, Remainder, decimal;
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -46,29 +44,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txt = (TextView) findViewById(R.id.txt);
+        //  edt = (TextView) findViewById(R.id.edt);
         //txt2=(TextView) findViewById(R.id.txt2);
-        btn1 = (Button) findViewById(R.id.btn1);
-        btn2 = (Button) findViewById(R.id.btn2);
-        btn3 = (Button) findViewById(R.id.btn3);
-        btn4 = (Button) findViewById(R.id.btn4);
-        btn5 = (Button) findViewById(R.id.btn5);
-        btn6 = (Button) findViewById(R.id.btn6);
-        btn7 = (Button) findViewById(R.id.btn7);
-        btn8 = (Button) findViewById(R.id.btn8);
-        btn9 = (Button) findViewById(R.id.btn9);
-        btn0 = (Button) findViewById(R.id.btn0);
-        btn00 = (Button) findViewById(R.id.btn00);
-        btnA = (Button) findViewById(R.id.btnA);
-        btnS = (Button) findViewById(R.id.btnS);
-        btnM = (Button) findViewById(R.id.btnM);
-        btnD = (Button) findViewById(R.id.btnD);
-        btnP = (Button) findViewById(R.id.btnP);
-        btnE = (Button) findViewById(R.id.btnE);
-        btnH = (Button) findViewById(R.id.btnH);
-        btnC = (Button) findViewById(R.id.btnC);
-        btnF = (Button) findViewById(R.id.btnF);
-
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+        btn4 = findViewById(R.id.btn4);
+        btn5 = findViewById(R.id.btn5);
+        btn6 = findViewById(R.id.btn6);
+        btn7 = findViewById(R.id.btn7);
+        btn8 = findViewById(R.id.btn8);
+        btn9 = findViewById(R.id.btn9);
+        btn0 = findViewById(R.id.btn0);
+        btn00 = findViewById(R.id.btn00);
+        btnA = findViewById(R.id.btnA);
+        btnS = findViewById(R.id.btnS);
+        btnM = findViewById(R.id.btnM);
+        btnD = findViewById(R.id.btnD);
+        btnP = findViewById(R.id.btnP);
+        btnE = findViewById(R.id.btnE);
+        btnH = findViewById(R.id.btnH);
+        btnC = findViewById(R.id.btnC);
+        btnF = findViewById(R.id.btnF);
+        EditText = findViewById(R.id.edt);
         btn1.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
@@ -151,11 +149,14 @@ public class MainActivity extends AppCompatActivity {
         btnA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (EditText.getText().length() != 0)
                     val1 = Float.parseFloat((EditText.getText() + ""));
                 Addition = true;
+                decimal = false;
                 EditText.setText(null);
             }
+
         });
         btnS.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
                 if (EditText.getText().length() != 0)
                     val1 = Float.parseFloat((EditText.getText() + ""));
                 Subtraction = true;
+                decimal = false;
                 EditText.setText(null);
             }
         });
@@ -172,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
                 if (EditText.getText().length() != 0)
                     val1 = Float.parseFloat((EditText.getText() + ""));
                 Multiplication = true;
+                decimal = false;
                 EditText.setText(null);
             }
         });
@@ -181,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 if (EditText.getText().length() != 0)
                     val1 = Float.parseFloat((EditText.getText() + ""));
                 Division = true;
+                decimal = false;
                 EditText.setText(null);
             }
         });
@@ -191,71 +195,96 @@ public class MainActivity extends AppCompatActivity {
                     val1 = Float.parseFloat((EditText.getText() + ""));
                 }
                 Remainder = true;
+                decimal = false;
                 EditText.setText(null);
             }
         });
+
         btnE.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View view) {
-                if (Addition) {
+                if (Addition || Subtraction || Multiplication || Division || Remainder) {
                     val2 = Float.parseFloat(EditText.getText() + "");
                 }
                 if (Addition) {
                     EditText.setText(val1 + val2 + "");
                     Addition = false;
                 }
-            }
-        });
-        btnE.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {
-                if (Subtraction) {
-                    val2 = Float.parseFloat(EditText.getText() + "");
-                }
                 if (Subtraction) {
                     EditText.setText(val1 - val2 + "");
                     Subtraction = false;
                 }
-            }
-        });
-        btnE.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {
-                if (Multiplication) {
-                    val2 = Float.parseFloat(EditText.getText() + "");
-                }
+
                 if (Multiplication) {
                     EditText.setText(val1 * val2 + "");
                     Multiplication = false;
-                }
-            }
-        });
-        btnE.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {
-                if (Division) {
-                    val2 = Float.parseFloat(EditText.getText() + "");
                 }
                 if (Division) {
                     EditText.setText(val1 / val2 + "");
                     Division = false;
                 }
-            }
-        });
-        btnE.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {
-                if (Remainder) {
-                    val2 = Float.parseFloat(EditText.getText() + "");
-                }
                 if (Remainder) {
                     EditText.setText(val1 % val2 + "");
                     Remainder = false;
+                }
+            }
+        });
+        btnF.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                if (decimal) {
+                    // just for fun :) don't think y here is this
+                } else {
+                    EditText.setText(EditText.getText() + ".");
+                    decimal = true;
+                }
+            }
+        });
+        btnA.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {                         //Testing....................
+                if (Addition) {
+                    // just for fun :) don't think y here is this
+                } else {
+                    EditText.setText(val1 + val2 + "");
+                    EditText.setText(EditText.getText() + "+");
+
+                    Addition = true;
+                }
+            }
+        });                                                         //Testing...................
+        btnS.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {                         //Testing....................
+                if (Subtraction) {
+                    EditText.setText(val1 - val2 + "");
+                    Subtraction = false;
+                } else {
+                    EditText.setText(EditText.getText() + "-");
+                    Subtraction = true;
+                }
+            }
+        });                                                         //Testing...................
+        btnC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText.setText("");
+                val1 = 0;
+                val2 = 0;
+            }
+        });
+        btnD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String displayedElements = EditText.getText().toString();
+                int len = displayedElements.length();
+                if (len > 0) {
+                    displayedElements = displayedElements.substring(0, len - 1);
+                    EditText.setText(displayedElements);
                 }
             }
         });

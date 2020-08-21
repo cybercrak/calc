@@ -2,6 +2,8 @@
   <dictionary name="SARRAN">
     <words>
       <w>displaytext</w>
+      <w>orangeround</w>
+      <w>requestcode</w>
       <w>sarran</w>
     </words>
   </dictionary>

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState);//comment
         setContentView(R.layout.activity_main);
         //  edt = (TextView) findViewById(R.id.edt);
         //txt2=(TextView) findViewById(R.id.txt2);

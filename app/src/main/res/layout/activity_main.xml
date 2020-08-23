@@ -8,13 +8,15 @@
 
     <EditText
         android:id="@+id/edt"
-        android:layout_width="323dp"
-        android:layout_height="194dp"
+        android:layout_width="329dp"
+        android:layout_height="149dp"
         android:autofillHints=""
         android:inputType=""
-        tools:ignore="LabelFor,MissingConstraints"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="67dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,MissingConstraints" />
 
 
     <Button
@@ -29,7 +31,7 @@
         app:layout_constraintStart_toStartOf="@+id/btn4"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <TextView
         android:id="@+id/btn2"
         android:layout_width="70dp"
         android:layout_height="43dp"
@@ -145,34 +147,17 @@
         tools:text="@string/displaytext" />
 
     <Button
-        android:id="@+id/btn0"
-        android:layout_width="70dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rounded_corners"
-        android:text="@string/_0"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="@+id/btnF"
-        app:layout_constraintStart_toEndOf="@+id/btnF"
-        app:layout_constraintStart_toStartOf="@+id/btn8" />
-
-    <Button
         android:id="@+id/btnF"
         android:layout_width="70dp"
         android:layout_height="43dp"
-        android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
         android:background="@drawable/rounded_corners"
         android:text="@string/dot"
         android:textAllCaps="true"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnE"
-        app:layout_constraintStart_toStartOf="@+id/btn7"
-        app:layout_constraintTop_toBottomOf="@+id/btn7"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintBottom_toBottomOf="@+id/btn0"
+        app:layout_constraintStart_toStartOf="@+id/btn7" />
 
     <Button
         android:id="@+id/btn00"
@@ -201,22 +186,29 @@
         android:id="@+id/btnE"
         android:layout_width="90dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="75dp"
         android:background="@drawable/orangeround_corners"
         android:text="@string/e"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/btnF" />
+        app:layout_constraintEnd_toStartOf="@+id/btnH"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnF"
+        app:layout_constraintVertical_bias="0.76" />
 
     <Button
         android:id="@+id/btnD"
         android:layout_width="90dp"
         android:layout_height="43dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
         android:background="@drawable/orangeround_corners"
         android:text="@string/del"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="@+id/btnE"
         app:layout_constraintEnd_toStartOf="@+id/btnH"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toEndOf="@+id/btnE" />
 
     <Button
@@ -261,8 +253,39 @@
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnD" />
+        app:layout_constraintTop_toBottomOf="@+id/btnD"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="70dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_corners"
+        android:text="@string/_0"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintStart_toEndOf="@+id/btnF"
+        app:layout_constraintStart_toStartOf="@+id/btn8"
+        app:layout_constraintTop_toBottomOf="@+id/btn8" />
+
+    <TextView
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="686dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/calculator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615"
+        tools:ignore="TextViewEdits" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

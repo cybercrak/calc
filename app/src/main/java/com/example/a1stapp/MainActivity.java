@@ -34,12 +34,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*protected void runtimePermission() {
+/*   protected void runtimePermission() {
         if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUESTCODE);
         }
     }*/
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -235,40 +236,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (decimal) {
-                    // just for fun :) don't think y here is this
-                } else {
+                    // just for fun :)
+                    // } else {
                     EditText.setText(EditText.getText() + ".");
                     decimal = true;
                 }
             }
         });
-        btnA.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {                         //Testing....................
-                if (Addition) {
-                    // just for fun :) don't think y here is this
-                } else {
-                    EditText.setText(val1 + val2 + "");
-                    EditText.setText(EditText.getText() + "+");
 
-                    Addition = true;
-                }
-            }
-        });                                                         //Testing...................
-        btnS.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View view) {                         //Testing....................
-                if (Subtraction) {
-                    EditText.setText(val1 - val2 + "");
-                    Subtraction = false;
-                } else {
-                    EditText.setText(EditText.getText() + "-");
-                    Subtraction = true;
-                }
-            }
-        });                                                         //Testing...................
         btnC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

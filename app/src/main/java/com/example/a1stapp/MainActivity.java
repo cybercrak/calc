@@ -236,8 +236,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (decimal) {
-                    // just for fun :)
-                    // } else {
                     EditText.setText(EditText.getText() + ".");
                     decimal = true;
                 }

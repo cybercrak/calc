@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">1st app</string>
+    <string name="app_name">Calculator</string>
     <string name="you_have_been_hacked_if_you_click_the_button">You have been hacked if you click the button!!!!</string>
     <string name="_1">1</string>
     <string name="textview">TextView</string>

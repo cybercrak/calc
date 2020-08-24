@@ -5,7 +5,6 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:fullBackupContent="@xml/backup_descriptor"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:label="Calculator"
@@ -18,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 </manifest>

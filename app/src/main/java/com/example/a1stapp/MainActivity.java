@@ -39,12 +39,10 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUESTCODE);
         }
     }*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //  edt = (TextView) findViewById(R.id.edt);
         //txt2=(TextView) findViewById(R.id.txt2);
 //        btn1 = findViewById(R.id.btn1);
 //        btn2 = findViewById(R.id.btn2);

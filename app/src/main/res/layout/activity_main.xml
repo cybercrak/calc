@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/TitleHolder"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,12 +25,13 @@
                 android:fontFamily="@font/aclonica"
                 android:text="@string/app_name"
                 android:textColor="@color/textPrimary"
-                android:textSize="25sp"
+                android:textSize="35sp"
                 android:textStyle="bold|italic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
@@ -43,6 +44,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:gravity="center|right"
+        android:textSize="25sp"
         android:background="@drawable/textview_bg"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,49 +70,58 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:rippleColor="#123"
                 android:backgroundTint="#000"
                 android:text="1"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:rippleColor="@color/colorPrimary"
                 android:backgroundTint="#000"
                 android:padding="10dp"
                 android:text="2"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000000"
                 android:padding="10dp"
                 android:text="3"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnA"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
                 android:text="+"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="#FF0000" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,101 +131,59 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="1"
+                android:text="4"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="2"
+                android:text="5"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="3"
+                android:text="6"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
-                android:text="+"
+                android:text="-"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="1"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="2"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="3"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#FF7700"
-                android:padding="10dp"
-                android:text="+"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
+                app:rippleColor="#FF0000" />
 
         </LinearLayout>
 
@@ -224,48 +194,60 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="1"
+                android:text="7"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="2"
+                android:text="8"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="3"
+                android:text="9"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
-                android:text="+"
+                android:text="*"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="#FF0000" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -275,38 +257,124 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
+                android:id="@+id/btn00"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
+                android:padding="10dp"
+                android:text="00"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp"
+                app:rippleColor="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp"
+                app:rippleColor="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:text="."
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp"
+                app:rippleColor="@color/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF7700"
+                android:padding="10dp"
+                android:text="/"
+                app:cornerRadius="20dp"
+                app:rippleColor="#FF0000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:padding="10dp"
                 android:text="="
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
+                android:id="@+id/btnD"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="DEL"
+                android:text="Del"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
+                android:id="@+id/btnC"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="DEL"
+                android:text="clr"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                app:rippleColor="#0000FF" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF7700"
+                android:padding="10dp"
+                android:text="%"
+                app:cornerRadius="20dp"
+                app:rippleColor="#FF0000" />
         </LinearLayout>
+
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
@@ -322,5 +390,9 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+
     </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

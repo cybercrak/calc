@@ -31,6 +31,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
@@ -67,49 +68,56 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:rippleColor="#123"
                 android:backgroundTint="#000"
                 android:text="1"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="#123" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
-                app:rippleColor="@color/colorPrimary"
                 android:backgroundTint="#000"
                 android:padding="10dp"
                 android:text="2"
+                android:textColor="@color/cardview_light_background"
                 app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:rippleColor="@color/colorPrimary" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000000"
                 android:padding="10dp"
                 android:text="3"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnA"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
                 android:text="+"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                app:cornerRadius="20dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -119,101 +127,55 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="1"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="4"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="2"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="5"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="3"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="6"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnS"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
-                android:text="+"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="20dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="1"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="2"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="3"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#FF7700"
-                android:padding="10dp"
-                android:text="+"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
-
+                android:text="-"
+                app:cornerRadius="20dp" />
 
         </LinearLayout>
 
@@ -224,48 +186,57 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="1"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="7"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="2"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="8"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="3"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="9"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#FF7700"
                 android:padding="10dp"
-                android:text="+"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="8dp" />
+                android:text="*"
+                app:cornerRadius="20dp" />
+
+
         </LinearLayout>
 
         <LinearLayout
@@ -275,36 +246,114 @@
             android:paddingTop="20dp">
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:padding="10dp"
+                android:text="00"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:text="."
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF7700"
+                android:padding="10dp"
+                android:text="/"
+                app:cornerRadius="20dp"
+                app:strokeColor="#FF0098" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnE"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:text="="
-                app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="30dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnD"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="16dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
                 android:text="DEL"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnC"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="16dp"
                 android:layout_weight="1"
                 android:backgroundTint="#000"
                 android:padding="10dp"
-                android:text="DEL"
-                app:cornerRadius="20dp"
-                android:layout_marginRight="16dp" />
+                android:text="clear_all"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnP"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:backgroundTint="#FF7700"
+                android:padding="10dp"
+                android:text="%"
+                android:textColor="@color/cardview_light_background"
+                app:cornerRadius="20dp" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

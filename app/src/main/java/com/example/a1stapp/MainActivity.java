@@ -1,10 +1,8 @@
 package com.example.a1stapp;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        //txt2=(TextView) findViewById(R.id.txt2);
-//        btn1 = findViewById(R.id.btn1);
-//        btn2 = findViewById(R.id.btn2);
+        //txt2=(TextView) findViewById(R.id.txt2);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
 //        btn3 = findViewById(R.id.btn3);
 //        btn4 = findViewById(R.id.btn4);
 //        btn5 = findViewById(R.id.btn5);
@@ -65,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 //        btnC = findViewById(R.id.btnC);
 //        btnF = findViewById(R.id.btnF);
 //        EditText = findViewById(R.id.edt);
-//        btn1.setOnClickListener(new View.OnClickListener() {
+        //        btn1.setOnClickListener(new View.OnClickListener() {
 //            @SuppressLint("SetTextI18n")
 //            @Override
 //            public void onClick(View view) {

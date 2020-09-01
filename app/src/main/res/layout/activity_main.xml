@@ -35,21 +35,27 @@
     </LinearLayout>
 
 
-    <com.google.android.material.textview.MaterialTextView
+    <TextView
         android:id="@+id/textV"
         android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:gravity="bottom|right"
+        android:paddingEnd="30dp"
+        android:textIsSelectable="true"
+        android:gravity="center|end"
+        android:paddingRight="30dp"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/textview_bg"
+        android:textColor="@color/textPrimary"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TitleHolder" />
+        app:layout_constraintTop_toBottomOf="@+id/TitleHolder"/>
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -73,8 +79,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:textStyle="bold"
                 android:layout_weight="1"
-                app:rippleColor="#0000FF "
+                android:textSize="15sp"
+                app:rippleColor="#0000FF"
                 android:backgroundTint="#000"
                 android:text="1"
                 app:cornerRadius="20dp"
@@ -107,7 +115,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnA"
+                android:id="@+id/addtion"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -124,7 +132,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:paddingTop="10dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn4"
@@ -166,7 +174,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnS"
+                android:id="@+id/subtract"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -184,7 +192,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:paddingTop="10dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn7"
@@ -226,7 +234,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnM"
+                android:id="@+id/multiplication"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -245,7 +253,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:paddingTop="10dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn0"
@@ -274,7 +282,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnF"
+                android:id="@+id/dot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -287,7 +295,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnH"
+                android:id="@+id/division"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -304,10 +312,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="20dp">
+            android:paddingTop="10dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnD"
+                android:id="@+id/delete"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -320,7 +328,7 @@
                 app:rippleColor="#0000FF" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnE"
+                android:id="@+id/equals"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
@@ -331,18 +339,18 @@
                 app:cornerRadius="20dp"
                 app:rippleColor="#0000FF" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnC"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#000"
-                android:padding="10dp"
-                android:text="CLR"
-                app:cornerRadius="20dp"
-                app:rippleColor="#0000FF" />
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/btnC"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:layout_marginRight="8dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:backgroundTint="#000"-->
+<!--                android:padding="10dp"-->
+<!--                android:text="CLR"-->
+<!--                app:cornerRadius="20dp"-->
+<!--                app:rippleColor="#0000FF" />-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnP"
@@ -356,6 +364,26 @@
                 android:text="%"
                 app:cornerRadius="20dp"
                 app:rippleColor="#ff0000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/clearAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:padding="10dp"
+                android:text="Clear All"
+                app:cornerRadius="20dp"
+                app:rippleColor="#0000FF" />
         </LinearLayout>
 
     </LinearLayout>

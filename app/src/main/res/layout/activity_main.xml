@@ -36,7 +36,7 @@
 
 
     <TextView
-        android:id="@+id/textV"
+        android:id="@+id/calcScreen"
         android:textSize="30sp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -339,18 +339,6 @@
                 app:cornerRadius="20dp"
                 app:rippleColor="#0000FF" />
 
-<!--            <com.google.android.material.button.MaterialButton-->
-<!--                android:id="@+id/btnC"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginEnd="8dp"-->
-<!--                android:layout_marginRight="8dp"-->
-<!--                android:layout_weight="1"-->
-<!--                android:backgroundTint="#000"-->
-<!--                android:padding="10dp"-->
-<!--                android:text="CLR"-->
-<!--                app:cornerRadius="20dp"-->
-<!--                app:rippleColor="#0000FF" />-->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnP"
@@ -373,7 +361,7 @@
             android:paddingTop="10dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/clearAll"
+                android:id="@+id/ClearAll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"

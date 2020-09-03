@@ -7,10 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 public class MainActivity extends AppCompatActivity {
-    public int REQUESTCODE = 3;
     TextView calcScreen;
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn00, division, del, sub, multiply, btnP, ClearAll, Add, equal, dot;
     double val1 = 0, val2 = 0;
@@ -70,7 +67,15 @@ public class MainActivity extends AppCompatActivity {
             }
 
        });
-//        sub.setOnClickListener(new View.OnClickListener() {
+
+            ClearAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String displayedElements = calcScreen.getText().toString();
+                int len = displayedElements.length();
+                if (len > 0)
+                {//        sub.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
 //                if (EditText.getText().length() != 0)
@@ -112,15 +117,14 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-//        btnE.setOnClickListener(new View.OnClickListener() {
-//            @SuppressLint("SetTextI18n")
+                    //       equal.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
 //                if (Addition || Subtraction || Multiplication || Division || Remainder) {
-//                   val2 = Double.parseDouble(EditText.getText() + "");
+//                   val2 = Double.parseDouble(calcScreen.getText() + "");
 //                }
 //                if (Addition) {
-//                   EditText.setText(val1 + val2 + "");
+//                   calcScreen.setText(val1 + val2 + "");
 //                    Addition = false;
 //                }
 //                if (Subtraction) {
@@ -154,18 +158,12 @@ public class MainActivity extends AppCompatActivity {
 //               }
 //            }
 //        });
+
         /*
             setting onClick listener to delete and clear all Btn
-         */
-        ClearAll.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+            */
 
-                String displayedElements = calcScreen.getText().toString();
-                int len = displayedElements.length();
-                if (len > 0)
-                {
-                  calcScreen.setText("");
+                    calcScreen.setText("");
                   val1 = 0;
                   val2 = 0;
                     Toast.makeText(MainActivity.this, "!! Cleared Everything !!", Toast.LENGTH_SHORT).show();
@@ -210,9 +208,22 @@ public class MainActivity extends AppCompatActivity {
         del = findViewById(R.id.delete);
         btnP = findViewById(R.id.btnP);
         equal = findViewById(R.id.equals);
-        ClearAll = findViewById(R.id.clearAll);
+        ClearAll = findViewById(R.id.ClearAll);
         dot = findViewById(R.id.dot);
-        calcScreen = findViewById(R.id.textV);
+        calcScreen = findViewById(R.id.calcScreen);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

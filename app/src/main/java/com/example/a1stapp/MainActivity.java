@@ -1,218 +1,265 @@
 package com.example.a1stapp;
 
+import org.mariuszgromada.math.mxparser.*;
+import android.app.Fragment;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity {
+
+    Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_00, btn_Add, btn_Sub, btn_Mul, btn_Div, btn_del, btn_dot, btn_ClearAll, btn_equal, btn_p;
     TextView calcScreen;
-    Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0, btn00, division, del, sub, multiply, btnP, ClearAll, Add, equal, dot;
-    double val1 = 0, val2 = 0;
-    boolean Addition, Subtraction, Multiplication, Division, Remainder, decimal;
+    int Value1;
 
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        if (requestCode == REQUESTCODE) {
-//            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-//                Toast.makeText(this, "!! Welcome !!", Toast.LENGTH_LONG).show();
-//            } else {
-//                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUESTCODE);
-//            }
-//        }
-//    }
 
-//    protected void runtimePermission() {
-//        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-//            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUESTCODE);
-//        }
-//    }
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initializeViews();
-        /*
-            setting onClick listener to numbers
-         */
-        btn1.setOnClickListener(new View.OnClickListener() {
+
+
+        btn_0 = findViewById(R.id.btn0);
+        btn_00 = findViewById(R.id.btn00);
+        btn_1 = findViewById(R.id.btn1);
+        btn_2 = findViewById(R.id.btn2);
+        btn_3 = findViewById(R.id.btn3);
+        btn_4 = findViewById(R.id.btn4);
+        btn_5 = findViewById(R.id.btn5);
+        btn_6 = findViewById(R.id.btn6);
+        btn_7 = findViewById(R.id.btn7);
+        btn_8 = findViewById(R.id.btn8);
+        btn_9 = findViewById(R.id.btn9);
+        btn_Add = findViewById(R.id.addition);
+        btn_Sub = findViewById(R.id.subtract);
+        btn_Mul = findViewById(R.id.multiplication);
+        btn_Div = findViewById(R.id.division);
+        btn_del = findViewById(R.id.delete);
+        btn_equal = findViewById(R.id.equal);
+        btn_ClearAll = findViewById(R.id.ClearAll);
+        btn_dot = findViewById(R.id.dot);
+        btn_p = findViewById(R.id.btnP);
+        calcScreen = findViewById(R.id.calcScreen);
+
+
+        btn_0.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                calcScreen.append("0");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("00");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 calcScreen.append("1");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
+
+        btn_2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 calcScreen.append("2");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
             }
         });
 
-        /*
-            setting onClick listener to operators
-         */
-        Add.setOnClickListener(new View.OnClickListener() {
+        btn_3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                calcScreen.append(" + ");
-//                if (EditText.getText().length() != 0)
-//                   val1 = Double.parseDouble(EditText.getText() + "");
-//               Addition = true;
-//               decimal = false;
-//                EditText.setText(null);
+            public void onClick(View v) {
+                calcScreen.append("3");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
             }
+        });
 
-       });
-
-            ClearAll.setOnClickListener(new View.OnClickListener() {
+        btn_4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+                calcScreen.append("4");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
 
+        btn_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("5");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("6");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("7");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("8");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append("9");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_dot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calcScreen.append(".");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_Add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                writeExpression("+");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate( 100);
+            }
+        });
+
+        btn_Sub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writeExpression("-");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_Mul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writeExpression("*");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_Div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writeExpression("/");
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+        btn_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writeExpression("%");
+
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+            }
+        });
+
+        btn_equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
+                String Expression = calcScreen.getText().toString();
+
+                Expression exp = new Expression(Expression);
+                String result = String.valueOf(exp.calculate());
+                calcScreen.setText(result);
+
+            }
+        });
+
+        btn_ClearAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 String displayedElements = calcScreen.getText().toString();
                 int len = displayedElements.length();
-                if (len > 0)
-                {//        sub.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (EditText.getText().length() != 0)
-//                    val1 = Double.parseDouble(EditText.getText() + "");
-//                Subtraction = true;
-//                decimal = false;
-//                EditText.setText(null);
-//            }
-//        });
-//        multiply.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//               if (EditText.getText().length() != 0)
-//                    val1 = Double.parseDouble(EditText.getText() + "");
-//                Multiplication = true;
-//                decimal = false;
-//                EditText.setText(null);
-//            }
-//        });
-//        division.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (EditText.getText().length() != 0)
-//                    val1 = Double.parseDouble(EditText.getText() + "");
-//                Division = true;
-//                decimal = false;
-//                EditText.setText(null);
-//            }
-//       });
-//        btnP.setOnClickListener(new View.OnClickListener() {
-//          @Override
-//            public void onClick(View view) {
-//                if (EditText.getText().length() != 0) {
-//                    val1 = Double.parseDouble(EditText.getText() + "");
-//                }
-//                Remainder = true;
-//                decimal = false;
-//                EditText.setText(null);
-//            }
-//        });
-//
-                    //       equal.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (Addition || Subtraction || Multiplication || Division || Remainder) {
-//                   val2 = Double.parseDouble(calcScreen.getText() + "");
-//                }
-//                if (Addition) {
-//                   calcScreen.setText(val1 + val2 + "");
-//                    Addition = false;
-//                }
-//                if (Subtraction) {
-//                    EditText.setText(val1 - val2 + "");
-//                    Subtraction = false;
-//                }
-//
-//                if (Multiplication) {
-//                    EditText.setText(val1 * val2 + "");
-//                    Multiplication = false;
-//                }
-//                if (Division) {
-//                    EditText.setText(val1 / val2 + "");
-//                    Division = false;
-//               }
-//               if (Remainder) {
-//                    EditText.setText(val1 % val2 + "");
-//                    Remainder = false;
-//                }
-//            }
-//        });
-//       btnF.setOnClickListener(new View.OnClickListener() {
-//            @SuppressLint("SetTextI18n")
-//            @Override
-//            public void onClick(View view) {
-//                if (decimal) {
-//                    //just for fun :) don't think y here is this
-//                } else {
-//                    EditText.setText(EditText.getText() + ".");
-//                    decimal = true;
-//               }
-//            }
-//        });
-
-        /*
-            setting onClick listener to delete and clear all Btn
-            */
-
+                if (len > 0) {
                     calcScreen.setText("");
-                  val1 = 0;
-                  val2 = 0;
-                    Toast.makeText(MainActivity.this, "!! Cleared Everything !!", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(MainActivity.this, "Nothing Found to clear :-) ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "!!Cleared!!", Toast.LENGTH_SHORT).show();
+                    Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    d.vibrate(100);
+                } else {
+                    Toast.makeText(MainActivity.this, "$..Nothing found to clear...$", Toast.LENGTH_SHORT).show();
+                    Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    d.vibrate(1000);
+
+
                 }
             }
-       });
-        del.setOnClickListener(new View.OnClickListener() {
+        });
+        btn_del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String displayedElements = calcScreen.getText().toString();
+                String displayedElements = calcScreen.getText().toString();//
                 int len = displayedElements.length();
-                if (len > 0)
-                {
+                if (len > 0) {
                     displayedElements = displayedElements.substring(0, len - 1);
                     calcScreen.setText(displayedElements);
-                }else {
-                   Toast.makeText(MainActivity.this, "There is nothing to delete :-) ", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Nothing to delete :-)", Toast.LENGTH_SHORT).show();
                 }
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                d.vibrate(100);
             }
         });
-    }
 
-    public void initializeViews()
-    {
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
-        btn5 = findViewById(R.id.btn5);
-        btn6 = findViewById(R.id.btn6);
-        btn7 = findViewById(R.id.btn7);
-        btn8 = findViewById(R.id.btn8);
-        btn9 = findViewById(R.id.btn9);
-        btn0 = findViewById(R.id.btn0);
-        btn00 = findViewById(R.id.btn00);
-        Add = findViewById(R.id.addtion);
-        sub = findViewById(R.id.subtract);
-        multiply = findViewById(R.id.multiplication);
-        division = findViewById(R.id.division);
-        del = findViewById(R.id.delete);
-        btnP = findViewById(R.id.btnP);
-        equal = findViewById(R.id.equals);
-        ClearAll = findViewById(R.id.ClearAll);
-        dot = findViewById(R.id.dot);
-        calcScreen = findViewById(R.id.calcScreen);
     }
-}
+        void writeExpression (String Value1){
+            String expression = calcScreen.getText().toString();
+            expression = expression + Value1;
+            calcScreen.setText(expression);
+        }
+
+    }
 
 
 

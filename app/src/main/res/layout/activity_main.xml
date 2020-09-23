@@ -115,7 +115,7 @@
                 android:layout_marginRight="8dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/addtion"
+                android:id="@+id/addition"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginEnd="8dp"
@@ -328,7 +328,7 @@
                 app:rippleColor="#0000FF" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/equals"
+                android:id="@+id/equal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"

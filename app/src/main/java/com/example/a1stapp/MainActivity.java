@@ -27,14 +27,25 @@ public class MainActivity extends AppCompatActivity {
     TextView calcScreen;
     int Value1;
     static DrawerLayout  drawerlayout;
-    AppBarConfiguration.Builder mAppBarConfiguration;
+    AppBarConfiguration mAppBarConfiguration;
 
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this,R.id.frag);
+        return NavigationUI.navigateUp(navController,mAppBarConfiguration)||super.onSupportNavigateUp();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         drawerlayout = findViewById(R.id.drawer);
+        NavigationView navigationView = findViewById(R.id.navView);
+        NavController navController = Navigation.findNavController(this, R.id.frag);
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2);
+        NavigationUI.setupWithNavController(navigationView, navController);
 
 
         btn_0 = findViewById(R.id.btn0);
@@ -66,10 +77,6 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        NavigationView navigationView = findViewById(R.id.navView);
-        NavController navController = Navigation.findNavController(this, R.id.frag);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment,R.id.mainActivity2);
-        NavigationUI.setupWithNavController(navigationView, navController);
 
 
         btn_0.setOnClickListener(new View.OnClickListener() {
@@ -279,18 +286,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        void writeExpression (String Value1){
+        void writeExpression (String Value1) {
             String expression = calcScreen.getText().toString();
             expression = expression + Value1;
             calcScreen.setText(expression);
         }
-    @Override
-    public boolean onSupportNavigateUP(){
-        NavController navController = Navigation.findNavController(this,R.id.frag);
-        return NavigationUI.navigateUp(navController,mAppBarConfiguration)||super.onSupportNavigateUp();
-    }
+
 
 }
+
+
 
 
 

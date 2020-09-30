@@ -12,18 +12,29 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_00, btn_Add, btn_Sub, btn_Mul, btn_Div, btn_del, btn_dot, btn_ClearAll, btn_equal, btn_p;
     TextView calcScreen;
     int Value1;
+    static DrawerLayout  drawerlayout;
+    AppBarConfiguration.Builder mAppBarConfiguration;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        drawerlayout = findViewById(R.id.drawer);
 
 
         btn_0 = findViewById(R.id.btn0);
@@ -47,6 +58,18 @@ public class MainActivity extends AppCompatActivity {
         btn_dot = findViewById(R.id.dot);
         btn_p = findViewById(R.id.btnP);
         calcScreen = findViewById(R.id.calcScreen);
+
+        findViewById(R.id.burger).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerlayout.openDrawer(GravityCompat.START);
+            }
+
+        });
+        NavigationView navigationView = findViewById(R.id.navView);
+        NavController navController = Navigation.findNavController(this, R.id.frag);
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment,R.id.mainActivity2);
+        NavigationUI.setupWithNavController(navigationView, navController);
 
 
         btn_0.setOnClickListener(new View.OnClickListener() {
@@ -252,14 +275,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-    }
+        }
+
+
+
         void writeExpression (String Value1){
             String expression = calcScreen.getText().toString();
             expression = expression + Value1;
             calcScreen.setText(expression);
         }
-
+    @Override
+    public boolean onSupportNavigateUP(){
+        NavController navController = Navigation.findNavController(this,R.id.frag);
+        return NavigationUI.navigateUp(navController,mAppBarConfiguration)||super.onSupportNavigateUp();
     }
+
+}
 
 
 

@@ -11,25 +11,56 @@
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">
-<!--       <LinearLayout-->
-<!--           android:id="@+id/linearLayout"-->
-<!--           android:layout_width="match_parent"-->
-<!--           android:layout_height="?actionBarSize"-->
-<!--           android:orientation="horizontal"-->
+       <LinearLayout
+           android:id="@+id/linearLayout"
+           android:layout_width="match_parent"
+           android:layout_height="?actionBarSize"
+           android:orientation="horizontal"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintVertical_bias="0.01">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-
-           <fragment
-
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+        <LinearLayout
+            android:id="@+id/TitleHolder"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:defaultnavigationhost="true"
-            app:navGraph="@navigation/navigation"
-            android:id="@+id/frag"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="left"
+            android:id="@+id/burger"
+            android:src="@drawable/ic_twotone_menu_24"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="?actionBarSize"
+               android:id="@+id/textview"
+               />
+       </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+       </LinearLayout>
+
+       <fragment
+           android:id="@+id/frag"
+           android:name="androidx.navigation.fragment.NavHostFragment"
+           android:layout_width="0dp"
+           android:layout_height="5dp"
+           android:defaultnavigationhost="true"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           app:navGraph="@navigation/navigation" />
 
 
    </androidx.constraintlayout.widget.ConstraintLayout>

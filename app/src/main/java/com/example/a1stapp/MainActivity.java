@@ -22,10 +22,17 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
+/*
 
+
+THIS ACTIVITY SHOULD CONTAIN ONLY NAV ITEMS CALC CODE SHOULD BE IN ITS RESPECTIVE ACTIVITY
+
+
+
+ */
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_00, btn_Add, btn_Sub, btn_Mul, btn_Div, btn_del, btn_dot, btn_ClearAll, btn_equal, btn_p;
     TextView calcScreen;
-    int Value1;
+//    int Value1;
     static DrawerLayout  drawerlayout;
     AppBarConfiguration mAppBarConfiguration;
 
@@ -44,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         drawerlayout = findViewById(R.id.drawer);
         NavigationView navigationView = findViewById(R.id.navView);
         NavController navController = Navigation.findNavController(this, R.id.frag);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2);
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2);//add .build() after ) COZ THE APP BAR NEEDS TO BE BUILD AFTER ADDING ACTIVITY
         NavigationUI.setupWithNavController(navigationView, navController);
 
 

@@ -51,7 +51,7 @@ THIS ACTIVITY SHOULD CONTAIN ONLY NAV ITEMS CALC CODE SHOULD BE IN ITS RESPECTIV
         drawerlayout = findViewById(R.id.drawer);
         NavigationView navigationView = findViewById(R.id.navView);
         NavController navController = Navigation.findNavController(this, R.id.frag);
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2);//add .build() after ) COZ THE APP BAR NEEDS TO BE BUILD AFTER ADDING ACTIVITY
+        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.blankFragment, R.id.mainActivity2).build();
         NavigationUI.setupWithNavController(navigationView, navController);
 
 

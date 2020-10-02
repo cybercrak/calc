@@ -8,6 +8,7 @@
     tools:openDrawer="start"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
+
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent">
@@ -44,17 +45,14 @@
                android:layout_height="45dp"
                android:layout_marginLeft="8dp"
                android:layout_marginRight="8dp"
-               android:gravity="left"
+               android:gravity="start"
                android:src="@drawable/ic_twotone_menu_24" />
 
            <fragment
                android:id="@+id/frag"
                android:name="androidx.navigation.fragment.NavHostFragment"
-               android:layout_width="450dp"
-               android:layout_height="787dp"
-               android:layout_marginEnd="16dp"
-               android:layout_marginRight="16dp"
-               android:defaultNavhost="true"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
                app:navGraph="@navigation/navigation" />
 
 

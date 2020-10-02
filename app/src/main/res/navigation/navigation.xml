@@ -6,8 +6,8 @@
     app:startDestination="@id/blankFragment">
     <fragment
         android:id="@+id/blankFragment"
-        android:name="com.example.a1stapp.BlankFragment"
         android:label="fragment_blank"
+        android:name="com.example.a1stapp.BlankFragment"
         tools:layout="@layout/fragment_blank" />
     <activity
         android:id="@+id/mainActivity2"

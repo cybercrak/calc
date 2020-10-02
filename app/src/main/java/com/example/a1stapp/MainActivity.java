@@ -26,9 +26,6 @@ public class MainActivity extends AppCompatActivity {
     static DrawerLayout  drawerlayout;
     AppBarConfiguration mAppBarConfiguration;
 
-
-
-
     @Override
     protected void
     onCreate(Bundle savedInstanceState) {

@@ -21,10 +21,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-import org.mariuszgromada.math.mxparser.Expression;
+import org.mariuszgromada.math.mxparser.*;
 
 import static android.content.Context.*;
-import static androidx.core.content.ContextCompat.getSystemService;
 /*
 
 
@@ -88,6 +87,7 @@ public class BlankFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        //dont delete anything frm here
         // Inflate the layout for this fragment
 
 
@@ -281,7 +281,7 @@ public class BlankFragment extends Fragment {
                 d.vibrate(100);
                 String Expression = calcScreen.getText().toString();
 
-                org.mariuszgromada.math.mxparser.Expression exp = new Expression(Expression);
+                Expression exp = new Expression(Expression);
                 String result = String.valueOf(exp.calculate());
                 calcScreen.setText(result);
 

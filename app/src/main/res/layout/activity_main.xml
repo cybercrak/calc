@@ -29,10 +29,13 @@
 
        <LinearLayout
            android:id="@+id/TitleHolder"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
+           android:layout_width="536dp"
+           android:layout_height="860dp"
            android:orientation="vertical"
-           tools:layout_editor_absoluteY="283dp">
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintLeft_toLeftOf="parent"
+           app:layout_constraintRight_toRightOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent">
 
 
            <ImageView
@@ -48,7 +51,7 @@
                android:id="@+id/frag"
                android:name="androidx.navigation.fragment.NavHostFragment"
                android:layout_width="450dp"
-               android:layout_height="?android:windowFullscreen"
+               android:layout_height="787dp"
                android:layout_marginEnd="16dp"
                android:layout_marginRight="16dp"
                android:defaultNavhost="true"

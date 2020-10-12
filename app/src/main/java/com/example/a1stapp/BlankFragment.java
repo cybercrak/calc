@@ -1,6 +1,7 @@
 package com.example.a1stapp;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.core.content.ContextCompat;
@@ -12,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,53 +82,49 @@ public class BlankFragment extends Fragment {
     TextView calcScreen;
 
 
-    private Object getSystemService(String vibratorService) {
+    private Vibrator getSystemService(String vibratorService) {
 
         return null;
     }
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+
+        @Override
+        public View onCreateView (LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState){
         //dont delete anything frm here
         // Inflate the layout for this fragment
-
-
-        btn_0 = btn_0.findViewById(R.id.btn0);
-        btn_00 = btn_00.findViewById(R.id.btn00);
-        btn_1 = btn_1.findViewById(R.id.btn1);
-        btn_2 = btn_2.findViewById(R.id.btn2);
-        btn_3 = btn_3.findViewById(R.id.btn3);
-        btn_4 = btn_4.findViewById(R.id.btn4);
-        btn_5 = btn_5.findViewById(R.id.btn5);
-        btn_6 = btn_6.findViewById(R.id.btn6);
-        btn_7 = btn_7.findViewById(R.id.btn7);
-        btn_8 = btn_8.findViewById(R.id.btn8);
-        btn_9 = btn_9.findViewById(R.id.btn9);
-        btn_Add = btn_Add.findViewById(R.id.addition);
-        btn_Sub = btn_Sub.findViewById(R.id.subtract);
-        btn_Mul = btn_Mul.findViewById(R.id.multiplication);
-        btn_Div = btn_Div.findViewById(R.id.division);
-        btn_del = btn_del.findViewById(R.id.delete);
-        btn_equal =btn_equal. findViewById(R.id.equal);
-        btn_ClearAll =btn_ClearAll. findViewById(R.id.ClearAll);
-        btn_dot = btn_dot.findViewById(R.id.dot);
-        btn_p = btn_p.findViewById(R.id.btnP);
-        calcScreen = calcScreen.findViewById(R.id.calcScreen);
-
-
+        View v = inflater.inflate(R.layout.fragment_blank,container,false);
+            btn_0 = v.findViewById(R.id.btn0);
+        btn_00 = v.findViewById(R.id.btn00);
+        btn_1 = v.findViewById(R.id.btn1);
+        btn_2 = v.findViewById(R.id.btn2);
+        btn_3 = v.findViewById(R.id.btn3);
+        btn_4 = v.findViewById(R.id.btn4);
+        btn_5 = v.findViewById(R.id.btn5);
+        btn_6 = v.findViewById(R.id.btn6);
+        btn_7 = v.findViewById(R.id.btn7);
+        btn_8 = v.findViewById(R.id.btn8);
+        btn_9 = v.findViewById(R.id.btn9);
+        btn_Add = v.findViewById(R.id.addition);
+        btn_Sub = v.findViewById(R.id.subtract);
+        btn_Mul = v.findViewById(R.id.multiplication);
+        btn_Div = v.findViewById(R.id.division);
+        btn_del = v.findViewById(R.id.delete);
+        btn_equal = v.findViewById(R.id.equal);
+        btn_ClearAll = v.findViewById(R.id.ClearAll);
+        btn_dot = v.findViewById(R.id.dot);
+        btn_p = v.findViewById(R.id.btnP);
+        calcScreen = v.findViewById(R.id.calcScreen);
 
 
         btn_0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calcScreen.append("0");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                Vibrator d= (Vibrator)getSystemService(VIBRATOR_SERVICE);
+                if(d!=null){
+                    d.vibrate(100);
+                }
             }
-
-
-
-
         });
 
         btn_00.setOnClickListener(new View.OnClickListener() {
@@ -134,7 +132,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("00");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -143,7 +143,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("1");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -152,7 +154,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("2");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if (d != null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -161,7 +165,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("3");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -170,7 +176,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("4");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -179,7 +187,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("5");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -188,8 +198,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("6");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                if(d!=null){
                 d.vibrate(100);
-            }
+            }}
         });
 
         btn_7.setOnClickListener(new View.OnClickListener() {
@@ -197,7 +208,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("7");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -206,17 +219,20 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append("8");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
-            }
+                if(d!=null) {
+                    d.vibrate(100);
+                }
+                }
         });
 
         btn_9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calcScreen.append("9");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                if(d!=null){
                 d.vibrate(100);
-            }
+            }}
         });
 
         btn_dot.setOnClickListener(new View.OnClickListener() {
@@ -224,7 +240,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 calcScreen.append(".");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -234,7 +252,9 @@ public class BlankFragment extends Fragment {
 
                 writeExpression("+");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -243,7 +263,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 writeExpression("-");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -252,7 +274,9 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 writeExpression("*");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -261,16 +285,19 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
                 writeExpression("/");
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
         btn_p.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 writeExpression("%");
-
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
             }
         });
 
@@ -278,12 +305,13 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
-                String Expression = calcScreen.getText().toString();
-
-                Expression exp = new Expression(Expression);
-                String result = String.valueOf(exp.calculate());
-                calcScreen.setText(result);
+                if(d!=null) {
+                    d.vibrate(100);
+                }
+                    String Expression = calcScreen.getText().toString();
+                org.mariuszgromada.math.mxparser.Expression exp = new Expression(Expression);
+                    String result = String.valueOf(exp.calculate());
+                    calcScreen.setText(result);
 
             }
         });
@@ -291,19 +319,22 @@ public class BlankFragment extends Fragment {
         btn_ClearAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String displayedElements = calcScreen.getText().toString();
                 int len = displayedElements.length();
                 if (len > 0) {
                     calcScreen.setText("");
                     Toast.makeText(getActivity(), "!!Cleared!!", Toast.LENGTH_SHORT).show();
                     Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                    d.vibrate(100);
+                    if(d!=null) {
+                        d.vibrate(100);
+                    }
                 } else {
                     Toast.makeText(getActivity(), "$..Nothing found to clear...$", Toast.LENGTH_SHORT).show();
-                    Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                    d.vibrate(1000);
-
-
+                    Vibrator d= (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                    if(d!=null) {
+                        d.vibrate(1000);
+                    }
                 }
             }
         });
@@ -320,13 +351,13 @@ public class BlankFragment extends Fragment {
                     Toast.makeText(getActivity(), "Nothing to delete :-)", Toast.LENGTH_SHORT).show();
                 }
                 Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                d.vibrate(100);
-            }
+                if(d!=null) {
+                    d.vibrate(100);
+                }
+                }
         });
-        return inflater.inflate(R.layout.fragment_blank, container, false);
+        return  v;
     }
-
-
 
     void writeExpression (String Value1) {
             String expression = calcScreen.getText().toString();

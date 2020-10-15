@@ -7,12 +7,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/group1"
+        android:icon="@mipmap/calc"
         android:label="Calculator"
-        android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".aboutActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

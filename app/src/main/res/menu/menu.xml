@@ -4,4 +4,12 @@
     android:id="@+id/mainActivity2"
     android:icon="@drawable/settingicon"
     android:title="Setting"/>
+    <item
+        android:id="@+id/aboutActivity"
+        android:icon="@drawable/abouticon"
+        android:title="About"/>
+    <item
+        android:id="@+id/contactActivity"
+        android:title="Contact"
+        android:icon="@drawable/contacticon"/>
 </menu>

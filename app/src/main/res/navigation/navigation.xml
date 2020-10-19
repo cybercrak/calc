@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_blankFragment_to_aboutActivity"
             app:destination="@+id/aboutActivity" />
+        <action
+            android:id="@+id/action_blankFragment_to_contactActivity"
+            app:destination="@+id/contactActivity" />
     </fragment>
     <activity
         android:id="@+id/mainActivity2"
@@ -28,4 +31,9 @@
         android:name="com.example.a1stapp.aboutActivity"
         android:label="activity_about"
         tools:layout="@layout/activity_about"/>
+    <activity
+        android:id="@+id/contactActivity"
+        android:name="com.example.a1stapp.contactActivity"
+        android:label="activity_contact"
+        tools:layout="@layout/activity_contact" />
 </navigation>

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/calc"
@@ -13,6 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity2"></activity>
         <activity android:name=".aboutActivity"></activity>
+        <activity android:name=".contactActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

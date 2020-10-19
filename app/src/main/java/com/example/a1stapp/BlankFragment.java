@@ -1,5 +1,6 @@
 package com.example.a1stapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
@@ -120,7 +121,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("0");
-                Vibrator d= (Vibrator)getSystemService(VIBRATOR_SERVICE);
+                Vibrator d= getSystemService(VIBRATOR_SERVICE);
                 if(d!=null){
                     d.vibrate(100);
                 }
@@ -131,7 +132,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("00");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -142,7 +143,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("1");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -153,7 +154,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("2");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if (d != null) {
                     d.vibrate(100);
                 }
@@ -164,7 +165,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("3");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -175,7 +176,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("4");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -186,7 +187,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("5");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -197,7 +198,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("6");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null){
                 d.vibrate(100);
             }}
@@ -207,7 +208,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("7");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -218,7 +219,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("8");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -229,7 +230,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append("9");
-                Vibrator d = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(Context.VIBRATOR_SERVICE);
                 if(d!=null){
                 d.vibrate(100);
             }}
@@ -239,7 +240,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 calcScreen.append(".");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -251,7 +252,7 @@ public class BlankFragment extends Fragment {
             public void onClick(View v) {
 
                 writeExpression("+");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -262,7 +263,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 writeExpression("-");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -273,7 +274,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 writeExpression("*");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -284,7 +285,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 writeExpression("/");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -294,7 +295,7 @@ public class BlankFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 writeExpression("%");
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -304,7 +305,7 @@ public class BlankFragment extends Fragment {
         btn_equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                Vibrator d = getSystemService(VIBRATOR_SERVICE);
                 if(d!=null) {
                     d.vibrate(100);
                 }
@@ -312,6 +313,7 @@ public class BlankFragment extends Fragment {
                 org.mariuszgromada.math.mxparser.Expression exp = new Expression(Expression);
                     String result = String.valueOf(exp.calculate());
                     calcScreen.setText(result);
+
 
             }
         });
@@ -325,13 +327,13 @@ public class BlankFragment extends Fragment {
                 if (len > 0) {
                     calcScreen.setText("");
                     Toast.makeText(getActivity(), "!!Cleared!!", Toast.LENGTH_SHORT).show();
-                    Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                    Vibrator d = getSystemService(VIBRATOR_SERVICE);
                     if(d!=null) {
                         d.vibrate(100);
                     }
                 } else {
                     Toast.makeText(getActivity(), "$..Nothing found to clear...$", Toast.LENGTH_SHORT).show();
-                    Vibrator d= (Vibrator) getSystemService(VIBRATOR_SERVICE);
+                    Vibrator d= getSystemService(VIBRATOR_SERVICE);
                     if(d!=null) {
                         d.vibrate(1000);
                     }
@@ -350,11 +352,8 @@ public class BlankFragment extends Fragment {
 
                     Toast.makeText(getActivity(), "Nothing to delete :-)", Toast.LENGTH_SHORT).show();
                 }
-                Vibrator d = (Vibrator) getSystemService(VIBRATOR_SERVICE);
-                if(d!=null) {
-                    d.vibrate(100);
-                }
-                }
+
+            }
         });
         return  v;
     }

@@ -5,23 +5,10 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".BlankFragment">
-<!--CHANGE FRAME LAYOUT TO CONSTRAINT LAYOUT-->
-
-<!--    <TextView-->
-<!--        android:layout_width="144dp"-->
-<!--        android:layout_height="28dp"-->
-<!--        android:text="CALCULATOR"-->
-<!--        android:textSize="20sp"-->
-<!--        android:fontFamily="@font/aclonica"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:gravity="start|center"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/calcScreen"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-    <TextView
+
+    <EditText
         android:id="@+id/calcScreen"
         android:layout_width="0dp"
         android:layout_height="0dp"

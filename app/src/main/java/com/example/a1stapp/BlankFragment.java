@@ -20,6 +20,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -80,7 +81,7 @@ public class BlankFragment extends Fragment {
 //    }
 //
     Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, btn_0, btn_00, btn_Add, btn_Sub, btn_Mul, btn_Div, btn_del, btn_dot, btn_ClearAll, btn_equal, btn_p;
-    TextView calcScreen;
+    EditText calcScreen;
 
 
     private Vibrator getSystemService(String vibratorService) {
@@ -310,11 +311,21 @@ public class BlankFragment extends Fragment {
                     d.vibrate(100);
                 }
                     String Expression = calcScreen.getText().toString();
-                org.mariuszgromada.math.mxparser.Expression exp = new Expression(Expression);
+                int len = Expression.length();
+                if(len>0) {
+                    org.mariuszgromada.math.mxparser.Expression exp = new Expression(Expression);
                     String result = String.valueOf(exp.calculate());
+                    String r[] = result.split("\\."); // for removing.0 from total
+                    if(r.length > 1){
+                        if (r[1].equals("0")) {
+                            result = r[0];
+                        }
+                    }
                     calcScreen.setText(result);
 
-
+                }else {
+                    Toast.makeText(getActivity(),"No data found  for calculating :/",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -355,6 +366,11 @@ public class BlankFragment extends Fragment {
 
             }
         });
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP){
+            calcScreen.setShowSoftInputOnFocus(false);
+        }else {
+            calcScreen.setTextIsSelectable(true);
+        }
         return  v;
     }
 

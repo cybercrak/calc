@@ -11,7 +11,7 @@ import  androidx.appcompat.app.AppCompatActivity;
 
 
 public class contactActivity extends AppCompatActivity {
-   ImageButton instalogo,twitterlogo,githublogo,telegramlogo,gmaillogo;
+   ImageButton instalogo,twitterlogo,githublogo,telegramlogo,maillogo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +20,7 @@ public class contactActivity extends AppCompatActivity {
         twitterlogo= findViewById(R.id.twitterlogo);
         githublogo=findViewById(R.id.github_logo);
         telegramlogo=findViewById(R.id.telegramlogo);
-        gmaillogo=findViewById(R.id.gmaillogo);
+        maillogo=findViewById(R.id.maillogo);
 
         instalogo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,14 +53,14 @@ public class contactActivity extends AppCompatActivity {
 
             }
         });
-        gmaillogo.setOnClickListener(new View.OnClickListener() {
+        maillogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("message/rfc822");
-                intent.putExtra(Intent.EXTRA_EMAIL,new String[]{"nsarran37@gmail.com"});
-                intent.setPackage("com.google.android.gm");
-                startActivity(intent);
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.setType("message/rfc822");
+                email.putExtra(Intent.EXTRA_EMAIL,new String[]{"nsarran37@gmail.com"});
+                email.setPackage("com.google.android.gm");
+                startActivity(email);
 
             }
         });
